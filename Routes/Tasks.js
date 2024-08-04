@@ -16,4 +16,40 @@ router.post('/', async (req, res) => {
     }
 });
 
+// Obtener todas las tareas de un proyecto
+router.get('/:projectId', async (req, res) => {
+    try {
+        const tasks = await Task.find({ project: req.params.projectId });
+        res.status(200).json(tasks);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+// Actualizar una tarea
+router.put('/:taskId', async (req, res) => {
+    const { name, description, status } = req.body;
+
+    try {
+        const task = await Task.findByIdAndUpdate(
+            req.params.taskId,
+            { name, description, status },
+            { new: true }
+        );
+        res.status(200).json(task);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+// Eliminar una tarea
+router.delete('/:taskId', async (req, res) => {
+    try {
+        await Task.findByIdAndDelete(req.params.taskId);
+        res.status(200).json({ message: 'Task deleted successfully' });
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
 module.exports = router;
