@@ -12,7 +12,8 @@ const TaskSchema = new mongoose.Schema({
     status: String,
     project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    comments: [CommentSchema]
+    comments: [CommentSchema],
+    history: [HistorySchema]
 });
 
 module.exports = mongoose.model('Task', TaskSchema);

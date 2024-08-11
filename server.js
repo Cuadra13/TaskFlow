@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -9,21 +8,18 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(bodyParser.json());
 
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/taskManagementApp', {
+// Conectar a MongoDB
+mongoose.connect('mongodb://localhost:27017/nombre_de_tu_base_de_datos', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+    useUnifiedTopology: true,
+    useCreateIndex: true
+}).then(() => console.log('MongoDB conectado'))
+  .catch(err => console.log('Error al conectar MongoDB:', err));
 
-// Define routes
+// Definir rutas
 app.use('/api/users', require('./routes/users'));
-app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
-

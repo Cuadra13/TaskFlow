@@ -1,4 +1,3 @@
-// routes/tasks.js
 const express = require('express');
 const router = express.Router();
 const Task = require('../Models/Task');
@@ -85,6 +84,36 @@ router.put('/:taskId', auth, async (req, res) => {
         res.status(400).json({ error: err.message });
     }
 });
+
+//Registro de cambios
+router.put('/:taskId', auth, async (req, res) => {
+    const { name, description, status } = req.body;
+    try {
+        const task = await Task.findById(req.params.taskId);
+        const updates = [];
+
+        if (name) {
+            updates.push(`Nombre de '${task.name}' a '${name}'`);
+            task.name = name;
+        }
+        if (description) {
+            updates.push('Descripción actualizada');
+            task.description = description;
+        }
+        if (status) {
+            updates.push(`Estado de '${task.status}' a '${status}'`);
+            task.status = status;
+        }
+
+        task.history.push({ user: req.user._id, action: updates.join(', ') });
+        await task.save();
+
+        res.status(200).json(task);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
 
 
 module.exports = router;
