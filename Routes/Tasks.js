@@ -52,4 +52,39 @@ router.delete('/:taskId', async (req, res) => {
     }
 });
 
+//Agregar comentarios a tareas
+router.post('/:taskId/comments', auth, async (req, res) => {
+    const { comment } = req.body;
+    try {
+        const task = await Task.findById(req.params.taskId);
+        task.comments.push({ user: req.user._id, comment });
+        await task.save();
+        res.status(200).json(task);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+//Notificaciones por cambio de estado
+router.put('/:taskId', auth, async (req, res) => {
+    const { status } = req.body;
+    try {
+        const task = await Task.findById(req.params.taskId);
+        task.status = status;
+        await task.save();
+
+        // Crear notificación
+        const notification = new Notification({
+            user: task.user,
+            message: `La tarea '${task.name}' cambió su estado a '${status}'.`
+        });
+        await notification.save();
+
+        res.status(200).json(task);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+
 module.exports = router;
