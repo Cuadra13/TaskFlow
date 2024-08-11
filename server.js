@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost/taskManagementApp', {
+mongoose.connect('mongodb://localhost:27017/taskManagementApp', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -18,11 +18,12 @@ mongoose.connect('mongodb://localhost/taskManagementApp', {
 .catch(err => console.log(err));
 
 // Define routes
-app.use('/api/users', require('./Routes/users'));
-app.use('/api/projects', require('./Routes/Projects'));
-app.use('/api/tasks', require('./Routes/Tasks'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/projects', require('./routes/projects'));
+app.use('/api/tasks', require('./routes/tasks'));
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
 
