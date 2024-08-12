@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 
 // Conectar a MongoDB
-mongoose.connect('mongodb://localhost:27017/nombre_de_tu_base_de_datos', {
+mongoose.connect('mongodb://localhost:27017/TaskFlow', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
