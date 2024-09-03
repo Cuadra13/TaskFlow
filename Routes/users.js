@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+const User = require('../TaskFlow/Models/User');
+const { app } = require('../server');
 
 // Ruta para registrar un nuevo usuario
 router.post('/register', async (req, res) => {
@@ -52,4 +53,6 @@ router.post('/login', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router;// Definir rutas
+
+

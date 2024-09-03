@@ -1,23 +1,10 @@
-// models/Project.js
 const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    description: {
-        type: String
-    },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    }
+    name: String,
+    type: String, // Tipo de proyecto
+    resources: { type: Number, default: 0 }, // Recursos invertidos
+    tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }]
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

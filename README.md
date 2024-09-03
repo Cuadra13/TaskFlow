@@ -1,95 +1,70 @@
-# TaskFlow
-Plataforma para la gestión de tareas y proyectos, orientada a equipos de trabajo.
-Claro, a continuación te proporciono historias de usuario, backlog, un plan de sprints y otros elementos relevantes de Scrum para tu proyecto de sistema de gestión de tareas y proyectos para equipos.
+# Getting Started with Create React App
 
-# Historias de Usuario
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Historia de Usuario 1: Crear una cuenta
--  Como nuevo usuario,
--  Quiero crear una cuenta en el sistema,
--  Para poder acceder y utilizar todas las funcionalidades del sistema.
+## Available Scripts
 
-# Historia de Usuario 2: Iniciar sesión
--  Como usuario registrado,
--  Quiero iniciar sesión en el sistema,
--  Para acceder a mis proyectos y tareas.
+In the project directory, you can run:
 
-# Historia de Usuario 3: Crear un proyecto
--  Como usuario,
--  Quiero crear un nuevo proyecto,
--  Para organizar y gestionar mis tareas dentro de ese proyecto.
+### `npm start`
 
-# Historia de Usuario 4: Asignar tareas a los miembros del equipo
--  Como administrador del proyecto,
--  Quiero asignar tareas a los miembros del equipo,
--  Para distribuir el trabajo de manera eficiente.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Historia de Usuario 5: Actualizar el estado de las tareas
--  Como miembro del equipo,
-- Quiero actualizar el estado de mis tareas,
-- Para que el equipo esté al tanto del progreso del proyecto.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-# Historia de Usuario 6: Comentar en las tareas
-- Como miembro del equipo,
-- Quiero comentar en las tareas,
-- Para colaborar y comunicarse con otros miembros del equipo.
+### `npm test`
 
-# Historia de Usuario 7: Recibir notificaciones
-- Como usuario,
-- Quiero recibir notificaciones sobre cambios en mis tareas y proyectos,
-- Para estar informado sobre el progreso y actualizaciones importantes.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# Historia de Usuario 8: Generar reportes de progreso
-- Como administrador del proyecto,
-- Quiero generar reportes de progreso,
-- Para revisar el estado general del proyecto y compartirlo con los stakeholders.
+### `npm run build`
 
-# Backlog del Producto
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Crear una cuenta
-2. Iniciar sesión
-3. Crear un proyecto
-4. Asignar tareas a los miembros del equipo
-5. Actualizar el estado de las tareas
-6. Comentar en las tareas
-7. Recibir notificaciones
-8. Generar reportes de progreso
-9. Diseño de la interfaz de usuario
-10. Implementación de la base de datos
-11. Pruebas de usabilidad
-12. Documentación del sistema
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-# Sprints y Plan de Trabajo
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Sprint 1: 22 de Julio - 28 de Julio
-- Objetivo del Sprint: Configuración del entorno y diseño del sistema.
-- Tareas:
-  - Configurar el entorno de desarrollo.
-  - Crear wireframes y prototipos de la interfaz de usuario.
-  - Definir la estructura de la base de datos.
-- # Entregas: Avance 1 (29 de Julio): Análisis y diseño del sistema.
+### `npm run eject`
 
-# Sprint 2: 29 de Julio - 11 de Agosto
-- Objetivo del Sprint: Desarrollo del backend.
-- Tareas:
-  - Implementar la funcionalidad de creación de cuentas.
-  - Implementar la funcionalidad de inicio de sesión.
-  - Desarrollar la funcionalidad de creación de proyectos.
-- # Entregas: Avance 2 (12 de Agosto): Configuración del entorno y desarrollo inicial del backend.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# Sprint 3: 12 de Agosto - 25 de Agosto
-- Objetivo del Sprint: Desarrollo del frontend.
-- Tareas :
-  - Crear componentes de React para la interfaz de usuario.
-  - Integrar el backend con el frontend.
-  - Desarrollar la funcionalidad de asignación de tareas.
-- # Entregas: Avance 3 (26 de Agosto): Desarrollo del backend y frontend.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Sprint 4: 26 de Agosto - 8 de Septiembre
-- Objetivo del Sprint: Integración y pruebas.
-- Tareas:
-  - Implementar la funcionalidad de actualización de tareas.
-  - Desarrollar la funcionalidad de comentarios en tareas.
-  - Implementar notificaciones.
-  - Realizar pruebas de usabilidad.
-- # Entregas: Avance 4 (9 de Septiembre): Sistema integrado y funcional.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
