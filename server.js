@@ -11,15 +11,19 @@ app.use(bodyParser.json());
 // Conectar a MongoDB
 mongoose.connect('mongodb://localhost:27017/TaskFlow', {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
+    useUnifiedTopology: true
 }).then(() => console.log('MongoDB conectado'))
   .catch(err => console.log('Error al conectar MongoDB:', err));
 
+  
 // Definir rutas
 app.use('/api/users', require('./routes/users'));
-app.use('/api/tasks', require('./routes/tasks'));
+const tasks = require('./Routes/Tasks');
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+const cors = require('cors');
+app.use(cors());  // Habilita CORS para todas las rutas
